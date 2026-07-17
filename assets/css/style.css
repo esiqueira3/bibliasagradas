@@ -411,6 +411,97 @@ img { max-width: 100%; }
 .cookie-banner a { color: var(--ouro-claro); }
 .cookie-acoes { display: flex; gap: 10px; flex-shrink: 0; }
 
+/* ---------- Bíblias Recomendadas ---------- */
+.grade-recomendadas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.cartao-biblia {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 28px;
+  box-shadow: 0 4px 14px -10px rgba(29, 23, 16, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.cartao-biblia:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+  border-color: var(--ouro);
+}
+.biblia-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.biblia-icone {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.biblia-info {
+  flex: 1;
+}
+.biblia-info h3 {
+  margin: 0 0 2px 0;
+  font-size: 1.35rem;
+}
+.biblia-versao {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+.biblia-avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.biblia-estrelas {
+  color: var(--ouro-claro);
+  font-size: 0.95rem;
+  letter-spacing: -1px;
+}
+.biblia-nota {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ouro-escuro);
+}
+.biblia-descricao {
+  color: var(--texto-suave);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+.biblia-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.tag-biblia {
+  font-size: 0.72rem;
+  background: var(--papel-2);
+  color: var(--texto-suave);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--borda);
+}
+.biblia-link {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 980px) {
   .grade-temas, .grade-temas-home { grid-template-columns: repeat(2, 1fr); }
@@ -433,7 +524,7 @@ img { max-width: 100%; }
 
 @media (max-width: 640px) {
   .container { padding: 0 18px; }
-  .grade-versiculos, .grade-temas, .grade-temas-home, .grade-ferramentas, .grade-salmos-home { grid-template-columns: 1fr; }
+  .grade-versiculos, .grade-temas, .grade-temas-home, .grade-ferramentas, .grade-salmos-home, .grade-recomendadas { grid-template-columns: 1fr; }
   .versiculo-destaque { grid-column: auto; }
   .hero-home { padding: 64px 0 56px; }
   .salmo-texto { padding: 26px 22px; }

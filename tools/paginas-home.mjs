@@ -7,6 +7,7 @@ import { pagina, adSlot, ORNAMENTO, esc, SITE, cartaoVersiculo } from './layout.
 import { TEMAS, TODOS_VERSICULOS } from './data-temas.mjs';
 import { SALMOS } from './data-salmos.mjs';
 import { LIVROS, TOTAL_CAPITULOS } from './data-livros.mjs';
+import { BIBLIAS_RECOMENDADAS } from './data-biblias.mjs';
 
 export function gerarPaginaHome() {
   const temasDestaque = TEMAS.slice(0, 8);
@@ -103,6 +104,38 @@ export function gerarPaginaHome() {
       </a>`
         )
         .join('\n')}
+    </div>
+  </section>
+
+  ${ORNAMENTO}
+
+  <section class="secao-home" aria-labelledby="titulo-recomendadas">
+    <header class="secao-cabecalho">
+      <h2 id="titulo-recomendadas">Bíblias Recomendadas</h2>
+      <p>Uma curadoria especial das melhores Bíblias de estudo e leitura devocional para enriquecer sua jornada com a Palavra.</p>
+    </header>
+    <div class="grade-recomendadas">
+      ${BIBLIAS_RECOMENDADAS.map(
+        (b) => `
+      <article class="cartao-biblia">
+        <div class="biblia-cabecalho">
+          <span class="biblia-icone" aria-hidden="true">${esc(b.emoji)}</span>
+          <div class="biblia-info">
+            <h3>${esc(b.titulo)}</h3>
+            <span class="biblia-versao">${esc(b.versao)}</span>
+            <div class="biblia-avaliacao" aria-label="Avaliação: ${b.avaliacao} de 5 estrelas">
+              <span class="biblia-estrelas" aria-hidden="true">★ ★ ★ ★ ★</span>
+              <span class="biblia-nota">${b.avaliacao.toFixed(1)}</span>
+            </div>
+          </div>
+        </div>
+        <p class="biblia-descricao">${esc(b.descricao)}</p>
+        <div class="biblia-tags">
+          ${b.tags.map((tag) => `<span class="tag-biblia">${esc(tag)}</span>`).join('\n          ')}
+        </div>
+        <a href="${esc(b.link)}" class="botao botao-borda biblia-link">Onde encontrar ✦</a>
+      </article>`
+      ).join('\n      ')}
     </div>
   </section>
 
