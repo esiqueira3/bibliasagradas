@@ -16,6 +16,7 @@ export const SITE = {
   traducao: 'Almeida Revista e Corrigida (domínio público)',
   anoFundacao: 2026,
   adsenseClientId: '', // Insira seu ca-pub-XXXXXXXXXXXXXXXX aqui para ativar o AdSense
+  googleAnalyticsId: 'G-3G8QNZ9L9T', // Tag do Google Analytics
 };
 
 export function esc(texto = '') {
@@ -196,7 +197,7 @@ export function pagina({ titulo, descricao, caminho, conteudo, classeBody = '', 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <script type="application/ld+json">${schemaSite}</script>${jsonLd ? `\n  <script type="application/ld+json">${jsonLd}</script>` : ''}${SITE.adsenseClientId ? `\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(SITE.adsenseClientId)}" crossorigin="anonymous"></script>` : ''}
+  <script type="application/ld+json">${schemaSite}</script>${jsonLd ? `\n  <script type="application/ld+json">${jsonLd}</script>` : ''}${SITE.adsenseClientId ? `\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(SITE.adsenseClientId)}" crossorigin="anonymous"></script>` : ''}${SITE.googleAnalyticsId ? `\n  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${esc(SITE.googleAnalyticsId)}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', '${esc(SITE.googleAnalyticsId)}');\n  </script>` : ''}
 </head>
 <body${classeBody ? ` class="${esc(classeBody)}"` : ''}>
 ${nav(caminho)}
