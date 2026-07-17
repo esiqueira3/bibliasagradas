@@ -1,11 +1,13 @@
 // =====================================================================
 // app.js — nav mobile, cookie banner, botões de copiar, versículo do
-// dia, gerador de versículos, plano de leitura (localStorage) e quiz.
-// Vanilla JS, sem dependências, executa em qualquer página do site.
+// dia, gerador de versículos, plano de leitura (localStorage), quiz e
+// seletores customizados. Vanilla JS, sem dependências.
 // =====================================================================
 
 (function () {
   'use strict';
+
+  let contadorSeletor = 0;
 
   function lerJSON(id) {
     const el = document.getElementById(id);
@@ -349,10 +351,141 @@
     botaoReiniciar.addEventListener('click', iniciar);
   }
 
+  // ---------------- Seletores customizados ----------------
+  // Substitui todo <select> nativo por um menu estilizado (gatilho +
+  // lista flutuante), mantendo o <select> original oculto como fonte
+  // de valor — qualquer outro script que leia `.value` continua
+  // funcionando sem mudanças.
+  function initSeletoresCustom() {
+    document.querySelectorAll('select').forEach(montarSeletorCustom);
+  }
+
+  function montarSeletorCustom(select) {
+    const idBase = select.id || `seletor-gerado-${++contadorSeletor}`;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'seletor-custom';
+
+    const gatilho = document.createElement('button');
+    gatilho.type = 'button';
+    gatilho.className = 'seletor-gatilho';
+    gatilho.setAttribute('aria-haspopup', 'listbox');
+    gatilho.setAttribute('aria-expanded', 'false');
+
+    const valorSpan = document.createElement('span');
+    valorSpan.className = 'seletor-valor';
+
+    const seta = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    seta.setAttribute('viewBox', '0 0 12 8');
+    seta.setAttribute('fill', 'none');
+    seta.setAttribute('aria-hidden', 'true');
+    seta.classList.add('seletor-seta');
+    seta.innerHTML = '<path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>';
+
+    gatilho.appendChild(valorSpan);
+    gatilho.appendChild(seta);
+
+    const lista = document.createElement('ul');
+    lista.className = 'seletor-lista';
+    lista.setAttribute('role', 'listbox');
+    lista.id = `${idBase}-lista`;
+    gatilho.setAttribute('aria-controls', lista.id);
+
+    const opcoes = [...select.options].map((opt, i) => {
+      const li = document.createElement('li');
+      li.className = 'seletor-opcao';
+      li.setAttribute('role', 'option');
+      li.id = `${idBase}-opcao-${i}`;
+      li.dataset.valor = opt.value;
+      li.textContent = opt.textContent;
+      lista.appendChild(li);
+      return li;
+    });
+
+    let destacada = null;
+
+    function destacar(li) {
+      if (destacada) destacada.classList.remove('realce');
+      destacada = li;
+      if (li) {
+        li.classList.add('realce');
+        gatilho.setAttribute('aria-activedescendant', li.id);
+        li.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function atualizarVisual() {
+      const atual = select.options[select.selectedIndex];
+      valorSpan.textContent = atual ? atual.textContent : '';
+      opcoes.forEach((li) => li.setAttribute('aria-selected', li.dataset.valor === select.value ? 'true' : 'false'));
+    }
+
+    function fechar() {
+      wrap.classList.remove('aberto');
+      gatilho.setAttribute('aria-expanded', 'false');
+    }
+
+    function abrir() {
+      wrap.classList.add('aberto');
+      gatilho.setAttribute('aria-expanded', 'true');
+      const atual = opcoes.find((li) => li.dataset.valor === select.value) || opcoes[0];
+      destacar(atual);
+    }
+
+    function escolher(li) {
+      select.value = li.dataset.valor;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      atualizarVisual();
+      fechar();
+      gatilho.focus();
+    }
+
+    gatilho.addEventListener('click', () => {
+      wrap.classList.contains('aberto') ? fechar() : abrir();
+    });
+
+    gatilho.addEventListener('keydown', (e) => {
+      const aberto = wrap.classList.contains('aberto');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!aberto) { abrir(); return; }
+        destacar(opcoes[Math.min(opcoes.indexOf(destacada) + 1, opcoes.length - 1)]);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (!aberto) { abrir(); return; }
+        destacar(opcoes[Math.max(opcoes.indexOf(destacada) - 1, 0)]);
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (aberto && destacada) escolher(destacada);
+        else abrir();
+      } else if (e.key === 'Escape' && aberto) {
+        e.preventDefault();
+        fechar();
+      }
+    });
+
+    opcoes.forEach((li) => {
+      li.addEventListener('click', () => escolher(li));
+      li.addEventListener('mouseenter', () => destacar(li));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target)) fechar();
+    });
+
+    wrap.appendChild(gatilho);
+    wrap.appendChild(lista);
+    select.insertAdjacentElement('afterend', wrap);
+    select.hidden = true;
+
+    atualizarVisual();
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initNavToggle();
     initCookieBanner();
     initCopiarBotoes();
+    initSeletoresCustom();
     initVersiculoDoDia();
     initGerador();
     initPlanoLeitura();
