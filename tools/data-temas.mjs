@@ -1,0 +1,492 @@
+// =====================================================================
+// data-temas.mjs — versículos por tema + conteúdo editorial original.
+// Texto bíblico: Almeida Revista e Corrigida (domínio público no Brasil).
+// Cada tema gera uma página completa: introdução própria, versículos,
+// reflexão e FAQ — nada de "thin content".
+// =====================================================================
+
+export const TEMAS = [
+  {
+    slug: 'versiculos-de-amor',
+    tema: 'Amor',
+    titulo: 'Versículos de Amor',
+    emoji: '❤',
+    descricao:
+      'Os mais belos versículos bíblicos sobre o amor: o amor de Deus, o amor ao próximo e o amor que edifica casamentos, famílias e amizades.',
+    heroFrase: 'O amor jamais acaba — tudo sofre, tudo crê, tudo espera, tudo suporta.',
+    intro: [
+      `Nenhuma palavra atravessa a Bíblia com tanta força quanto o amor. Da criação do mundo à cruz de Cristo, a Escritura conta uma única grande história: a de um Deus que ama primeiro, ama por inteiro e ensina os seus filhos a amar da mesma forma. Os versículos reunidos nesta página mostram o amor em todas as suas dimensões — o amor de Deus por nós, o amor entre marido e mulher, o amor aos amigos e até aos inimigos.`,
+      `Use estes textos para dedicatórias, votos de casamento, mensagens de bom dia ou para a sua própria meditação. Cada versículo traz a referência completa para que você possa abrir a sua Bíblia e ler o capítulo inteiro — o contexto sempre torna a Palavra ainda mais rica.`,
+    ],
+    versiculos: [
+      { ref: '1 Coríntios 13:4-7', texto: 'O amor é sofredor, é benigno; o amor não é invejoso; o amor não trata com leviandade, não se ensoberbece; não se porta com indecência, não busca os seus interesses, não se irrita, não suspeita mal; não folga com a injustiça, mas folga com a verdade; tudo sofre, tudo crê, tudo espera, tudo suporta.' },
+      { ref: 'João 3:16', texto: 'Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.' },
+      { ref: '1 João 4:8', texto: 'Aquele que não ama não conhece a Deus, porque Deus é amor.' },
+      { ref: 'João 15:13', texto: 'Ninguém tem maior amor do que este: de dar alguém a sua vida pelos seus amigos.' },
+      { ref: 'Romanos 8:38-39', texto: 'Porque estou certo de que nem a morte, nem a vida, nem os anjos, nem os principados, nem as potestades, nem o presente, nem o porvir, nem a altura, nem a profundidade, nem alguma outra criatura nos poderá separar do amor de Deus, que está em Cristo Jesus, nosso Senhor.' },
+      { ref: '1 Pedro 4:8', texto: 'Mas, sobretudo, tende ardente amor uns para com os outros, porque o amor cobrirá a multidão de pecados.' },
+      { ref: 'Cantares 8:7', texto: 'As muitas águas não podem apagar este amor, nem os rios afogá-lo.' },
+      { ref: 'Provérbios 10:12', texto: 'O ódio excita contendas, mas o amor cobre todas as transgressões.' },
+      { ref: '1 Coríntios 16:14', texto: 'Todas as vossas coisas sejam feitas com amor.' },
+      { ref: 'João 13:34-35', texto: 'Um novo mandamento vos dou: Que vos ameis uns aos outros; como eu vos amei a vós, que também vós uns aos outros vos ameis. Nisto todos conhecerão que sois meus discípulos, se vos amardes uns aos outros.' },
+      { ref: '1 João 4:19', texto: 'Nós o amamos porque ele nos amou primeiro.' },
+      { ref: 'Colossenses 3:14', texto: 'E, sobre tudo isto, revesti-vos de amor, que é o vínculo da perfeição.' },
+    ],
+    reflexao: `O famoso capítulo do amor, 1 Coríntios 13, não foi escrito para cerimônias de casamento — foi escrito para uma igreja em conflito. Paulo lembra que, sem amor, até os maiores dons espirituais "nada seriam". É um convite prático: antes de grandes gestos, o amor bíblico se prova na paciência, na bondade e na renúncia do orgulho no dia a dia.`,
+    faq: [
+      { q: 'Qual é o versículo mais famoso sobre o amor?', a: 'O mais citado é João 3:16 — "Porque Deus amou o mundo de tal maneira..." — considerado o resumo de toda a mensagem cristã. Para descrever o amor em si, o texto mais lido é 1 Coríntios 13, conhecido como "o capítulo do amor".' },
+      { q: 'Qual versículo de amor usar em casamento?', a: 'Os mais usados em cerimônias são 1 Coríntios 13:4-7, Cantares 8:7 ("as muitas águas não podem apagar este amor") e Eclesiastes 4:12 ("o cordão de três dobras não se quebra tão depressa").' },
+      { q: 'O que a Bíblia diz sobre amar quem nos feriu?', a: 'Jesus ensina em Mateus 5:44 a amar os inimigos e orar pelos que nos perseguem. O perdão não anula a dor, mas liberta o coração — veja também a nossa página de versículos sobre perdão.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-fe',
+    tema: 'Fé',
+    titulo: 'Versículos de Fé',
+    emoji: '🕊',
+    descricao:
+      'Versículos bíblicos sobre fé para fortalecer sua confiança em Deus: fé que move montanhas, fé nos momentos difíceis e fé que vem pela Palavra.',
+    heroFrase: 'A fé é o firme fundamento das coisas que se esperam e a prova das coisas que se não veem.',
+    intro: [
+      `A Bíblia define fé de um jeito surpreendente: não como um sentimento, mas como um fundamento — algo sólido sobre o qual se constrói a vida (Hebreus 11:1). Fé é confiar no caráter de Deus mesmo quando as circunstâncias dizem o contrário. Foi assim com Abraão, com Moisés, com Davi e com cada nome listado na "galeria dos heróis da fé" de Hebreus 11.`,
+      `Selecionamos abaixo os versículos mais poderosos sobre fé para você memorizar, declarar em oração e compartilhar com quem está atravessando um momento de dúvida. A fé, diz Paulo, vem pelo ouvir a Palavra — por isso, quanto mais você lê, mais ela cresce.`,
+    ],
+    versiculos: [
+      { ref: 'Hebreus 11:1', texto: 'Ora, a fé é o firme fundamento das coisas que se esperam e a prova das coisas que se não veem.' },
+      { ref: 'Marcos 9:23', texto: 'E Jesus disse-lhe: Se tu podes crer, tudo é possível ao que crê.' },
+      { ref: 'Mateus 17:20', texto: 'Se tiverdes fé como um grão de mostarda, direis a este monte: Passa daqui para acolá — e há de passar; e nada vos será impossível.' },
+      { ref: 'Romanos 10:17', texto: 'De sorte que a fé é pelo ouvir, e o ouvir pela palavra de Deus.' },
+      { ref: '2 Coríntios 5:7', texto: 'Porque andamos por fé e não por vista.' },
+      { ref: 'Hebreus 11:6', texto: 'Ora, sem fé é impossível agradar-lhe, porque é necessário que aquele que se aproxima de Deus creia que ele existe e que é galardoador dos que o buscam.' },
+      { ref: 'Marcos 11:24', texto: 'Por isso, vos digo que tudo o que pedirdes, orando, crede que o recebereis e tê-lo-eis.' },
+      { ref: 'Efésios 2:8', texto: 'Porque pela graça sois salvos, por meio da fé; e isso não vem de vós; é dom de Deus.' },
+      { ref: 'Gálatas 2:20', texto: 'Já estou crucificado com Cristo; e vivo, não mais eu, mas Cristo vive em mim; e a vida que agora vivo na carne vivo-a na fé do Filho de Deus, o qual me amou e se entregou a si mesmo por mim.' },
+      { ref: 'Provérbios 3:5-6', texto: 'Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento. Reconhece-o em todos os teus caminhos, e ele endireitará as tuas veredas.' },
+      { ref: '1 João 5:4', texto: 'Porque todo o que é nascido de Deus vence o mundo; e esta é a vitória que vence o mundo: a nossa fé.' },
+      { ref: 'Tiago 2:17', texto: 'Assim também a fé, se não tiver as obras, é morta em si mesma.' },
+    ],
+    reflexao: `Repare que Jesus nunca exigiu uma fé gigante — ele falou de um grão de mostarda, uma das menores sementes conhecidas. O tamanho da fé importa menos do que o tamanho daquele em quem ela é depositada. Uma fé pequena num Deus grande realiza mais do que uma confiança enorme em nós mesmos.`,
+    faq: [
+      { q: 'O que é fé segundo a Bíblia?', a: 'Hebreus 11:1 define: "a fé é o firme fundamento das coisas que se esperam e a prova das coisas que se não veem". É confiança ativa em Deus e nas suas promessas, demonstrada em atitudes concretas (Tiago 2:17).' },
+      { q: 'Como aumentar a minha fé?', a: 'Romanos 10:17 aponta o caminho: "a fé vem pelo ouvir, e o ouvir pela palavra de Deus". Leitura bíblica constante, oração e convivência com outros cristãos são os meios clássicos de crescimento da fé.' },
+      { q: 'Qual a diferença entre fé e esperança?', a: 'A fé confia no que Deus é e já prometeu; a esperança aguarda com expectativa o que ainda vai se cumprir. Elas andam juntas — veja também nossa página de versículos de esperança.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-esperanca',
+    tema: 'Esperança',
+    titulo: 'Versículos de Esperança',
+    emoji: '🌅',
+    descricao:
+      'Versículos de esperança para renovar suas forças: promessas de Deus para o futuro, consolo nas crises e a certeza de dias melhores.',
+    heroFrase: 'Porque eu bem sei os pensamentos que penso de vós: pensamentos de paz e não de mal, para vos dar o fim que esperais.',
+    intro: [
+      `Esperança, na Bíblia, não é otimismo ingênuo — é âncora (Hebreus 6:19). Enquanto o mundo usa a palavra para desejos incertos ("tomara que dê certo"), a Escritura a usa para uma certeza que ainda não chegou: Deus cumpre o que promete. É essa esperança que sustentou José na prisão, Israel no exílio e a igreja perseguida dos primeiros séculos.`,
+      `Se você atravessa um período de desânimo, luto ou espera, estes versículos foram separados para você. Leia devagar, em voz alta se puder. As misericórdias do Senhor, diz Lamentações, "se renovam a cada manhã" — inclusive nesta.`,
+    ],
+    versiculos: [
+      { ref: 'Jeremias 29:11', texto: 'Porque eu bem sei os pensamentos que penso de vós, diz o Senhor: pensamentos de paz e não de mal, para vos dar o fim que esperais.' },
+      { ref: 'Romanos 15:13', texto: 'Ora, o Deus de esperança vos encha de todo o gozo e paz em crença, para que abundeis em esperança pela virtude do Espírito Santo.' },
+      { ref: 'Lamentações 3:22-23', texto: 'As misericórdias do Senhor são a causa de não sermos consumidos, porque as suas misericórdias não têm fim; novas são cada manhã; grande é a tua fidelidade.' },
+      { ref: 'Isaías 40:31', texto: 'Mas os que esperam no Senhor renovarão as suas forças, subirão com asas como águias, correrão e não se cansarão, caminharão e não se fatigarão.' },
+      { ref: 'Salmos 42:5', texto: 'Por que estás abatida, ó minha alma, e por que te perturbas em mim? Espera em Deus, pois ainda o louvarei na salvação da sua presença.' },
+      { ref: 'Romanos 12:12', texto: 'Alegrai-vos na esperança, sede pacientes na tribulação, perseverai na oração.' },
+      { ref: 'Hebreus 10:23', texto: 'Retenhamos firmes a confissão da nossa esperança, porque fiel é o que prometeu.' },
+      { ref: 'Salmos 39:7', texto: 'Agora, pois, Senhor, que espero eu? A minha esperança está em ti.' },
+      { ref: '1 Pedro 1:3', texto: 'Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo, que, segundo a sua grande misericórdia, nos gerou de novo para uma viva esperança, pela ressurreição de Jesus Cristo dentre os mortos.' },
+      { ref: 'Provérbios 23:18', texto: 'Porque deveras haverá um bom futuro; não será cortada a tua expectação.' },
+      { ref: 'Salmos 71:14', texto: 'Mas eu esperarei continuamente e te louvarei cada vez mais.' },
+      { ref: 'Hebreus 6:19', texto: 'A qual temos como âncora da alma, segura e firme.' },
+    ],
+    reflexao: `Jeremias 29:11 — talvez o versículo de esperança mais compartilhado do mundo — foi escrito para um povo no exílio, que ainda ficaria setenta anos longe de casa. A promessa não eliminou a espera; deu sentido a ela. A esperança bíblica não nega o vale, mas garante que ele tem saída.`,
+    faq: [
+      { q: 'Qual o melhor versículo para quem está sem esperança?', a: 'Lamentações 3:22-23 é um dos mais indicados: foi escrito em meio às ruínas de Jerusalém e mesmo assim declara que as misericórdias de Deus "se renovam a cada manhã". Isaías 40:31 é outro clássico para renovar as forças.' },
+      { q: 'O que significa "esperar no Senhor"?', a: 'No hebraico, a palavra traz a ideia de espera ativa e confiante, como quem aguarda algo certo. Não é passividade: é continuar orando, obedecendo e servindo enquanto a resposta não chega.' },
+      { q: 'Jeremias 29:11 é uma promessa para mim?', a: 'O versículo foi dito a Israel no exílio, mas revela o caráter de Deus, que não muda: seus planos para os que o amam são de paz e futuro (Romanos 8:28 reafirma isso a todos os cristãos).' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-forca',
+    tema: 'Força',
+    titulo: 'Versículos de Força',
+    emoji: '🦁',
+    descricao:
+      'Versículos de força e superação: promessas bíblicas para os momentos difíceis, quando as forças acabam e você precisa de Deus para continuar.',
+    heroFrase: 'Posso todas as coisas naquele que me fortalece.',
+    intro: [
+      `Há dias em que a força simplesmente acaba. A Bíblia não finge que esses dias não existem — pelo contrário, seus maiores heróis conheceram o esgotamento: Elias pediu a morte debaixo de um zimbro, Davi chorou até não ter mais lágrimas, Paulo "desesperou até da própria vida". E é exatamente aí que a Escritura localiza a força de Deus: "a minha graça te basta, porque o meu poder se aperfeiçoa na fraqueza".`,
+      `Os versículos abaixo são para o dia da luta: a doença que assusta, o boleto que aperta, o luto que pesa, a batalha silenciosa que ninguém vê. Guarde-os no coração — ou na tela do celular — e volte a eles sempre que precisar.`,
+    ],
+    versiculos: [
+      { ref: 'Filipenses 4:13', texto: 'Posso todas as coisas naquele que me fortalece.' },
+      { ref: 'Isaías 41:10', texto: 'Não temas, porque eu sou contigo; não te assombres, porque eu sou o teu Deus; eu te fortaleço, e te ajudo, e te sustento com a destra da minha justiça.' },
+      { ref: 'Salmos 46:1', texto: 'Deus é o nosso refúgio e fortaleza, socorro bem presente na angústia.' },
+      { ref: 'Deuteronômio 31:6', texto: 'Esforçai-vos, e animai-vos; não temais, nem vos espanteis diante deles, porque o Senhor, teu Deus, é o que vai contigo; não te deixará nem te desamparará.' },
+      { ref: 'Isaías 40:29', texto: 'Dá vigor ao cansado e multiplica as forças ao que não tem nenhum vigor.' },
+      { ref: '2 Coríntios 12:9', texto: 'A minha graça te basta, porque o meu poder se aperfeiçoa na fraqueza. De boa vontade, pois, me gloriarei nas minhas fraquezas, para que em mim habite o poder de Cristo.' },
+      { ref: 'Salmos 28:7', texto: 'O Senhor é a minha força e o meu escudo; nele confiou o meu coração, e fui socorrido.' },
+      { ref: 'Neemias 8:10', texto: 'Não vos entristeçais, porque a alegria do Senhor é a vossa força.' },
+      { ref: 'Josué 1:9', texto: 'Não to mandei eu? Esforça-te e tem bom ânimo; não pasmes, nem te espantes, porque o Senhor, teu Deus, é contigo por onde quer que andares.' },
+      { ref: 'Efésios 6:10', texto: 'No demais, irmãos meus, fortalecei-vos no Senhor e na força do seu poder.' },
+      { ref: 'Êxodo 15:2', texto: 'O Senhor é a minha força e o meu cântico; ele me foi por salvação.' },
+      { ref: 'Habacuque 3:19', texto: 'O Senhor Jeová é a minha força, e fará os meus pés como os das cervas, e me fará andar sobre as minhas alturas.' },
+    ],
+    reflexao: `Filipenses 4:13 é frequentemente citado como lema de conquistas, mas Paulo o escreveu de dentro de uma prisão, falando sobre contentamento: ele havia aprendido a viver "tanto na fartura como na fome". A força prometida não é para vencermos tudo, mas para atravessarmos tudo — com Cristo.`,
+    faq: [
+      { q: 'Qual versículo ler quando não aguento mais?', a: 'Comece por Isaías 40:29-31: "dá vigor ao cansado e multiplica as forças ao que não tem nenhum vigor". Mateus 11:28 traz o convite direto de Jesus: "Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei".' },
+      { q: 'O que significa Filipenses 4:13 de verdade?', a: 'No contexto, Paulo fala de contentamento em qualquer circunstância — fartura ou necessidade. "Posso todas as coisas" significa suportar e atravessar qualquer situação com a força que Cristo dá, não uma garantia de sucesso em qualquer projeto.' },
+      { q: 'Deus se importa com a minha luta diária?', a: 'Sim. 1 Pedro 5:7 ordena: "lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós". A Bíblia mostra Deus atento a detalhes como fome, cansaço e lágrimas dos seus servos.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-para-ansiedade',
+    tema: 'Ansiedade',
+    titulo: 'Versículos para Ansiedade',
+    emoji: '🌿',
+    descricao:
+      'Versículos bíblicos para acalmar o coração ansioso: promessas de paz, descanso e cuidado de Deus para quem enfrenta ansiedade e preocupação.',
+    heroFrase: 'Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós.',
+    intro: [
+      `A ansiedade é uma das dores mais comuns do nosso tempo — e a Bíblia fala dela com uma franqueza surpreendente. Jesus dedicou um trecho inteiro do Sermão do Monte à preocupação com o amanhã, e Paulo escreveu a receita mais citada contra a ansiedade: apresentar tudo a Deus em oração, "com ações de graças", e receber em troca uma paz "que excede todo o entendimento".`,
+      `Os versículos a seguir não são fórmulas mágicas, mas âncoras: verdades para segurar quando os pensamentos aceleram. Leia-os devagar, respire, transforme cada um em oração.`,
+      `<strong>Importante:</strong> se a ansiedade tem limitado sua vida — sono, trabalho, relações —, procure também ajuda profissional. Cuidar da saúde mental com médicos e psicólogos não é falta de fé; é sabedoria e mordomia da vida que Deus lhe deu.`,
+    ],
+    versiculos: [
+      { ref: 'Filipenses 4:6-7', texto: 'Não estejais inquietos por coisa alguma; antes, as vossas petições sejam em tudo conhecidas diante de Deus, pela oração e súplicas, com ação de graças. E a paz de Deus, que excede todo o entendimento, guardará os vossos corações e os vossos sentimentos em Cristo Jesus.' },
+      { ref: '1 Pedro 5:7', texto: 'Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós.' },
+      { ref: 'Mateus 6:34', texto: 'Não vos inquieteis, pois, pelo dia de amanhã, porque o dia de amanhã cuidará de si mesmo. Basta a cada dia o seu mal.' },
+      { ref: 'Salmos 55:22', texto: 'Lança o teu cuidado sobre o Senhor, e ele te susterá; nunca permitirá que o justo seja abalado.' },
+      { ref: 'João 14:27', texto: 'Deixo-vos a paz, a minha paz vos dou; não vô-la dou como o mundo a dá. Não se turbe o vosso coração, nem se atemorize.' },
+      { ref: 'Mateus 11:28', texto: 'Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.' },
+      { ref: 'Isaías 26:3', texto: 'Tu conservarás em paz aquele cuja mente está firme em ti, porque ele confia em ti.' },
+      { ref: 'Salmos 94:19', texto: 'Na multidão dos meus pensamentos dentro de mim, as tuas consolações recrearam a minha alma.' },
+      { ref: 'Provérbios 12:25', texto: 'A ansiedade no coração do homem o abate, mas uma boa palavra o alegra.' },
+      { ref: '2 Timóteo 1:7', texto: 'Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação.' },
+      { ref: 'Salmos 34:4', texto: 'Busquei o Senhor, e ele me respondeu; livrou-me de todos os meus temores.' },
+      { ref: 'Salmos 23:4', texto: 'Ainda que eu andasse pelo vale da sombra da morte, não temeria mal algum, porque tu estás comigo; a tua vara e o teu cajado me consolam.' },
+    ],
+    reflexao: `Repare no detalhe de Filipenses 4:6: a oração contra a ansiedade vem "com ação de graças". A gratidão muda o foco — dos cenários que tememos para o Deus que já nos sustentou até aqui. O Salmo 94:19 descreve com precisão a mente ansiosa ("a multidão dos meus pensamentos dentro de mim") e aponta o antídoto: as consolações de Deus, uma a uma, recreando a alma.`,
+    faq: [
+      { q: 'Ter ansiedade é pecado ou falta de fé?', a: 'Não. Sentir ansiedade é humano — o próprio Jesus suou "gotas de sangue" de angústia no Getsêmani. A Bíblia nos convida a lançar a ansiedade sobre Deus (1 Pedro 5:7), e buscar ajuda médica e psicológica quando necessário é atitude de sabedoria, não de incredulidade.' },
+      { q: 'Qual o versículo mais indicado para crise de ansiedade?', a: 'Filipenses 4:6-7 é o mais recomendado, pois traz um caminho prático: oração, súplica e gratidão, seguidas da promessa de uma paz que "guarda" o coração. Repetir Salmos 23 lentamente também acalma muitos leitores.' },
+      { q: 'Posso ser cristão e fazer terapia ou tomar medicação?', a: 'Sim. Fé e cuidado profissional caminham juntos: Deus também age por meio de médicos, psicólogos e tratamentos. Lucas, autor de um evangelho, era médico (Colossenses 4:14).' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-paz',
+    tema: 'Paz',
+    titulo: 'Versículos de Paz',
+    emoji: '🕯',
+    descricao:
+      'Versículos de paz para acalmar a mente e o coração: a paz de Deus que excede todo entendimento, a paz de Cristo e a paz entre as pessoas.',
+    heroFrase: 'Deixo-vos a paz, a minha paz vos dou; não vô-la dou como o mundo a dá.',
+    intro: [
+      `A palavra hebraica <em>shalom</em>, traduzida como "paz", significa muito mais do que ausência de guerra: é plenitude, inteireza, bem-estar completo — a vida como Deus a projetou. Por isso a Bíblia fala de paz com Deus, paz interior e paz com o próximo como três fios da mesma corda.`,
+      `Nesta página você encontra os versículos de paz mais amados da Escritura: para acalmar uma mente agitada, abençoar um lar, encerrar uma oração ou enviar a alguém que precisa de serenidade hoje.`,
+    ],
+    versiculos: [
+      { ref: 'João 14:27', texto: 'Deixo-vos a paz, a minha paz vos dou; não vô-la dou como o mundo a dá. Não se turbe o vosso coração, nem se atemorize.' },
+      { ref: 'Filipenses 4:7', texto: 'E a paz de Deus, que excede todo o entendimento, guardará os vossos corações e os vossos sentimentos em Cristo Jesus.' },
+      { ref: 'Isaías 26:3', texto: 'Tu conservarás em paz aquele cuja mente está firme em ti, porque ele confia em ti.' },
+      { ref: 'Salmos 4:8', texto: 'Em paz também me deitarei e dormirei, porque só tu, Senhor, me fazes habitar em segurança.' },
+      { ref: 'Mateus 5:9', texto: 'Bem-aventurados os pacificadores, porque eles serão chamados filhos de Deus.' },
+      { ref: 'Romanos 5:1', texto: 'Sendo, pois, justificados pela fé, temos paz com Deus por nosso Senhor Jesus Cristo.' },
+      { ref: 'Colossenses 3:15', texto: 'E a paz de Deus, para a qual também fostes chamados em um corpo, domine em vossos corações; e sede agradecidos.' },
+      { ref: 'Números 6:24-26', texto: 'O Senhor te abençoe e te guarde; o Senhor faça resplandecer o seu rosto sobre ti e tenha misericórdia de ti; o Senhor sobre ti levante o seu rosto e te dê a paz.' },
+      { ref: 'Salmos 29:11', texto: 'O Senhor dará força ao seu povo; o Senhor abençoará o seu povo com paz.' },
+      { ref: 'João 16:33', texto: 'Tenho-vos dito isso, para que em mim tenhais paz; no mundo tereis aflições, mas tende bom ânimo; eu venci o mundo.' },
+      { ref: 'Isaías 54:10', texto: 'Porque os montes se retirarão, e os outeiros serão removidos; mas a minha benignidade não se apartará de ti, e a aliança da minha paz não mudará, diz o Senhor, que se compadece de ti.' },
+      { ref: 'Romanos 12:18', texto: 'Se for possível, quanto estiver em vós, tende paz com todos os homens.' },
+    ],
+    reflexao: `Jesus fez questão de distinguir: "não vô-la dou como o mundo a dá". A paz do mundo depende das circunstâncias — acaba quando elas mudam. A paz de Cristo é dada no meio das circunstâncias: "no mundo tereis aflições", ele avisa no mesmo discurso, "mas tende bom ânimo". É paz de porto seguro, não de mar calmo.`,
+    faq: [
+      { q: 'O que é a "paz que excede todo o entendimento"?', a: 'É a expressão de Filipenses 4:7 para uma serenidade que não tem explicação lógica nas circunstâncias — ela "guarda" o coração como uma sentinela, mesmo quando os problemas continuam existindo.' },
+      { q: 'Qual versículo de paz usar para abençoar alguém?', a: 'A bênção sacerdotal de Números 6:24-26 ("O Senhor te abençoe e te guarde...") é a mais tradicional das Escrituras, usada há mais de três mil anos para abençoar pessoas e famílias.' },
+      { q: 'Como ter paz para dormir?', a: 'Muitos leitores oram o Salmo 4:8 antes de deitar: "Em paz também me deitarei e dormirei, porque só tu, Senhor, me fazes habitar em segurança". Desligar as telas e meditar num único versículo também ajuda a aquietar a mente.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-gratidao',
+    tema: 'Gratidão',
+    titulo: 'Versículos de Gratidão',
+    emoji: '🙏',
+    descricao:
+      'Versículos de gratidão e agradecimento a Deus: textos bíblicos para dar graças em todas as circunstâncias e cultivar um coração agradecido.',
+    heroFrase: 'Em tudo dai graças, porque esta é a vontade de Deus em Cristo Jesus para convosco.',
+    intro: [
+      `A gratidão é o tom de fundo de toda a adoração bíblica. Os Salmos ordenam repetidamente: "Louvai ao Senhor, porque ele é bom, e a sua benignidade dura para sempre". No Novo Testamento, Paulo eleva a régua: "em tudo dai graças" — não por tudo, mas em tudo, porque em qualquer circunstância há um Deus fiel a quem agradecer.`,
+      `Use estes versículos na oração de agradecimento, na mensagem de obrigado a um amigo, no culto doméstico ou como lembrete diário de contar as bênçãos — literalmente, uma a uma, como sugere o Salmo 103: "não te esqueças de nenhum de seus benefícios".`,
+    ],
+    versiculos: [
+      { ref: '1 Tessalonicenses 5:18', texto: 'Em tudo dai graças, porque esta é a vontade de Deus em Cristo Jesus para convosco.' },
+      { ref: 'Salmos 107:1', texto: 'Louvai ao Senhor, porque ele é bom, porque a sua benignidade dura para sempre.' },
+      { ref: 'Colossenses 3:17', texto: 'E, quanto fizerdes por palavras ou por obras, fazei tudo em nome do Senhor Jesus, dando por ele graças a Deus Pai.' },
+      { ref: 'Salmos 118:24', texto: 'Este é o dia que fez o Senhor; regozijemo-nos e alegremo-nos nele.' },
+      { ref: 'Salmos 136:1', texto: 'Louvai ao Senhor, porque ele é bom, porque a sua benignidade dura para sempre.' },
+      { ref: 'Efésios 5:20', texto: 'Dando sempre graças por tudo a nosso Deus e Pai, em nome de nosso Senhor Jesus Cristo.' },
+      { ref: 'Salmos 100:4', texto: 'Entrai pelas portas dele com louvor e em seus átrios, com hinos; louvai-o e bendizei o seu nome.' },
+      { ref: 'Salmos 103:2', texto: 'Bendize, ó minha alma, ao Senhor, e não te esqueças de nenhum de seus benefícios.' },
+      { ref: 'Tiago 1:17', texto: 'Toda boa dádiva e todo dom perfeito vêm do alto, descendo do Pai das luzes, em quem não há mudança, nem sombra de variação.' },
+      { ref: '2 Coríntios 9:15', texto: 'Graças a Deus, pois, pelo seu dom inefável.' },
+      { ref: 'Salmos 9:1', texto: 'Eu te louvarei, Senhor, de todo o meu coração; contarei todas as tuas maravilhas.' },
+      { ref: 'Filipenses 4:6', texto: 'Não estejais inquietos por coisa alguma; antes, as vossas petições sejam em tudo conhecidas diante de Deus, pela oração e súplicas, com ação de graças.' },
+    ],
+    reflexao: `A ciência moderna confirmou o que os Salmos praticam há três mil anos: registrar motivos de gratidão transforma a saúde emocional. Mas a gratidão bíblica vai além do bem-estar — ela é um ato de justiça: reconhecer que "toda boa dádiva vem do alto" e devolver, em louvor, o crédito a quem ele pertence.`,
+    faq: [
+      { q: 'Como agradecer a Deus em meio às dificuldades?', a: '1 Tessalonicenses 5:18 diz "em tudo dai graças" — não "por tudo". Mesmo na dor é possível agradecer pela presença, pelo sustento e pelas promessas de Deus. Muitos salmos de lamento terminam exatamente assim, em louvor.' },
+      { q: 'Qual versículo usar para agradecer por uma conquista?', a: 'Salmos 118:24 ("Este é o dia que fez o Senhor") e 1 Samuel 7:12 ("Até aqui nos ajudou o Senhor" — o famoso Ebenézer) são os preferidos para celebrar vitórias e marcos.' },
+      { q: 'Por que a gratidão é tão importante na Bíblia?', a: 'Porque ela reconhece a fonte de todas as coisas. Romanos 1:21 aponta a ingratidão como o primeiro passo do afastamento de Deus; a gratidão, ao contrário, mantém o coração no lugar certo.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-sabedoria',
+    tema: 'Sabedoria',
+    titulo: 'Versículos de Sabedoria',
+    emoji: '📜',
+    descricao:
+      'Versículos de sabedoria da Bíblia: Provérbios de Salomão e conselhos divinos para decisões difíceis, vida financeira, palavras e relacionamentos.',
+    heroFrase: 'O temor do Senhor é o princípio da sabedoria.',
+    intro: [
+      `A Bíblia dedica livros inteiros à sabedoria — Provérbios, Eclesiastes e Jó formam a chamada "literatura sapiencial". Para a Escritura, sabedoria não é acúmulo de informação, mas habilidade de viver bem: escolher as palavras, administrar o dinheiro, criar os filhos, atravessar o sofrimento. E ela tem um ponto de partida claro: "o temor do Senhor é o princípio da sabedoria".`,
+      `Reunimos aqui os versículos essenciais para quem precisa tomar uma decisão, aconselhar alguém ou simplesmente crescer em maturidade. E a melhor notícia está em Tiago 1:5: quem tem falta de sabedoria pode simplesmente pedi-la a Deus, "que a todos dá liberalmente".`,
+    ],
+    versiculos: [
+      { ref: 'Tiago 1:5', texto: 'E, se algum de vós tem falta de sabedoria, peça-a a Deus, que a todos dá liberalmente e não o lança em rosto; e ser-lhe-á dada.' },
+      { ref: 'Provérbios 9:10', texto: 'O temor do Senhor é o princípio da sabedoria, e a ciência do Santo, a prudência.' },
+      { ref: 'Provérbios 3:13', texto: 'Bem-aventurado o homem que acha sabedoria, e o homem que adquire conhecimento.' },
+      { ref: 'Provérbios 2:6', texto: 'Porque o Senhor dá a sabedoria, e da sua boca vem o conhecimento e o entendimento.' },
+      { ref: 'Salmos 90:12', texto: 'Ensina-nos a contar os nossos dias, de tal maneira que alcancemos coração sábio.' },
+      { ref: 'Provérbios 4:7', texto: 'A sabedoria é a coisa principal; adquire, pois, a sabedoria; sim, com tudo o que possuis, adquire o conhecimento.' },
+      { ref: 'Provérbios 16:16', texto: 'Quanto melhor é adquirir a sabedoria do que o ouro! E quanto mais excelente, adquirir a prudência do que a prata!' },
+      { ref: 'Tiago 3:17', texto: 'Mas a sabedoria que vem do alto é, primeiramente, pura, depois, pacífica, moderada, tratável, cheia de misericórdia e de bons frutos, sem parcialidade e sem hipocrisia.' },
+      { ref: 'Provérbios 3:7', texto: 'Não sejas sábio a teus próprios olhos; teme ao Senhor e aparta-te do mal.' },
+      { ref: 'Eclesiastes 7:12', texto: 'Porque a sabedoria serve de defesa, como de defesa serve o dinheiro; mas a excelência do conhecimento é que a sabedoria dá vida ao seu possuidor.' },
+      { ref: 'Provérbios 15:1', texto: 'A resposta branda desvia o furor, mas a palavra dura suscita a ira.' },
+      { ref: 'Colossenses 4:6', texto: 'A vossa palavra seja sempre agradável, temperada com sal, para que saibais como vos convém responder a cada um.' },
+    ],
+    reflexao: `Quando Deus ofereceu a Salomão qualquer pedido, o jovem rei escolheu "um coração entendido" para governar — e recebeu, de acréscimo, tudo o que não pediu (1 Reis 3). A ordem do pedido revela a hierarquia bíblica: sabedoria vale mais que ouro, porque o ouro sem sabedoria se perde, e a sabedoria sem ouro constrói.`,
+    faq: [
+      { q: 'Como pedir sabedoria a Deus?', a: 'Tiago 1:5-6 dá a instrução direta: peça com fé, sem duvidar, e Deus dará "liberalmente" — sem cobrar nem censurar. A oração de Salomão em 1 Reis 3:9 é o modelo clássico: "dá, pois, ao teu servo um coração entendido".' },
+      { q: 'Qual livro da Bíblia é melhor para ganhar sabedoria?', a: 'Provérbios é o manual prático por excelência — são 31 capítulos, um para cada dia do mês. Eclesiastes ensina sobre o sentido da vida, e Tiago é chamado de "o Provérbios do Novo Testamento".' },
+      { q: 'Qual a diferença entre sabedoria e conhecimento na Bíblia?', a: 'Conhecimento é saber os fatos; sabedoria é saber aplicá-los para viver bem diante de Deus. Provérbios 9:10 resume: o ponto de partida da sabedoria é o temor do Senhor — reverência prática a Deus.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-sobre-familia',
+    tema: 'Família',
+    titulo: 'Versículos sobre Família',
+    emoji: '🏡',
+    descricao:
+      'Versículos bíblicos sobre família: promessas para o lar, criação dos filhos, casamento, honra aos pais e a bênção da união familiar.',
+    heroFrase: 'Eu e a minha casa serviremos ao Senhor.',
+    intro: [
+      `A família é a primeira instituição da Bíblia — existe antes dos reis, dos templos e das nações. É no lar que a fé é transmitida "assentado em tua casa, e andando pelo caminho, e deitando-te, e levantando-te" (Deuteronômio 6:7). Por isso a Escritura fala tanto de pais e filhos, casamento, avós e da casa como lugar de bênção.`,
+      `Estes versículos servem para dedicar um lar, aconselhar um casal, orar pelos filhos ou emoldurar na parede da sala — como a declaração de Josué, talvez a mais estampada em lares cristãos do mundo inteiro: "eu e a minha casa serviremos ao Senhor".`,
+    ],
+    versiculos: [
+      { ref: 'Josué 24:15', texto: 'Porém, se vos parece mal aos vossos olhos servir ao Senhor, escolhei hoje a quem sirvais; porém eu e a minha casa serviremos ao Senhor.' },
+      { ref: 'Salmos 127:1', texto: 'Se o Senhor não edificar a casa, em vão trabalham os que a edificam; se o Senhor não guardar a cidade, em vão vigia a sentinela.' },
+      { ref: 'Provérbios 22:6', texto: 'Instrui o menino no caminho em que deve andar, e, até quando envelhecer, não se desviará dele.' },
+      { ref: 'Êxodo 20:12', texto: 'Honra a teu pai e a tua mãe, para que se prolonguem os teus dias na terra que o Senhor, teu Deus, te dá.' },
+      { ref: 'Salmos 128:1-2', texto: 'Bem-aventurado aquele que teme ao Senhor e anda nos seus caminhos! Pois comerás do trabalho das tuas mãos; feliz serás, e te irá bem.' },
+      { ref: 'Provérbios 17:6', texto: 'Coroa dos velhos são os filhos dos filhos; e a glória dos filhos são seus pais.' },
+      { ref: 'Salmos 133:1', texto: 'Oh! Quão bom e quão suave é que os irmãos vivam em união!' },
+      { ref: 'Efésios 6:1-2', texto: 'Vós, filhos, sede obedientes a vossos pais no Senhor, porque isto é justo. Honra a teu pai e a tua mãe, que é o primeiro mandamento com promessa.' },
+      { ref: 'Marcos 10:9', texto: 'Portanto, o que Deus ajuntou, não o separe o homem.' },
+      { ref: '1 Timóteo 5:8', texto: 'Mas, se alguém não tem cuidado dos seus e principalmente dos da sua família, negou a fé e é pior do que o infiel.' },
+      { ref: 'Atos 16:31', texto: 'Crê no Senhor Jesus Cristo e serás salvo, tu e a tua casa.' },
+      { ref: 'Deuteronômio 6:6-7', texto: 'E estas palavras que hoje te ordeno estarão no teu coração; e as intimarás a teus filhos e delas falarás assentado em tua casa, e andando pelo caminho, e deitando-te, e levantando-te.' },
+    ],
+    reflexao: `O Salmo 127 desmonta a ilusão do lar autossuficiente: "se o Senhor não edificar a casa, em vão trabalham os que a edificam". Esforço, provisão e vigilância importam — o salmo não os dispensa —, mas o alicerce é outro. Família abençoada, na Bíblia, não é família perfeita: é família edificada, dia após dia, sobre o Senhor.`,
+    faq: [
+      { q: 'Qual o melhor versículo para dedicar um lar?', a: 'Josué 24:15 ("eu e a minha casa serviremos ao Senhor") é o mais usado em placas e quadros. Salmos 127:1 é o preferido para inaugurações e construções de casas.' },
+      { q: 'O que a Bíblia diz sobre criação de filhos?', a: 'Provérbios 22:6 orienta instruir o filho "no caminho em que deve andar"; Deuteronômio 6:6-7 mostra o método: conversas naturais ao longo do dia; e Efésios 6:4 equilibra: pais não devem provocar os filhos à ira, mas criá-los na doutrina e admoestação do Senhor.' },
+      { q: 'Existe promessa bíblica para a salvação da família?', a: 'Atos 16:31 ("Crê no Senhor Jesus Cristo e serás salvo, tu e a tua casa") é a palavra que milhões de cristãos oram sobre seus familiares, confiando que a fé plantada em um alcança toda a casa.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-cura',
+    tema: 'Cura',
+    titulo: 'Versículos de Cura',
+    emoji: '🌱',
+    descricao:
+      'Versículos de cura e saúde: promessas bíblicas para orar por enfermos, textos sobre o Deus que sara e conforto para tempos de doença.',
+    heroFrase: 'Ele sara os quebrantados de coração e liga as suas feridas.',
+    intro: [
+      `“Eu sou o Senhor, que te sara” — foi um dos primeiros nomes com que Deus se apresentou a Israel no deserto (Êxodo 15:26). Dos salmos de Davi aos milagres de Jesus, a Bíblia revela um Deus que se importa com o corpo e com a alma: sara feridas visíveis e invisíveis, "os quebrantados de coração" inclusive.`,
+      `Estes versículos são companheiros para o quarto de hospital, para a oração pelos enfermos e para a recuperação — do corpo, das emoções e da esperança. Eles convivem em harmonia com o tratamento médico: a mesma Bíblia que registra milagres também honra os cuidados de um médico como Lucas.`,
+      `<strong>Aviso:</strong> este conteúdo é devocional e não substitui diagnóstico ou tratamento. Diante de qualquer sintoma, procure um profissional de saúde.`,
+    ],
+    versiculos: [
+      { ref: 'Jeremias 30:17', texto: 'Porque te restaurarei a saúde e sararei as tuas chagas, diz o Senhor.' },
+      { ref: 'Salmos 103:2-3', texto: 'Bendize, ó minha alma, ao Senhor, e não te esqueças de nenhum de seus benefícios. Ele é o que perdoa todas as tuas iniquidades e sara todas as tuas enfermidades.' },
+      { ref: 'Isaías 53:5', texto: 'Mas ele foi ferido pelas nossas transgressões e moído pelas nossas iniquidades; o castigo que nos traz a paz estava sobre ele, e, pelas suas pisaduras, fomos sarados.' },
+      { ref: 'Salmos 147:3', texto: 'Ele sara os quebrantados de coração e liga as suas feridas.' },
+      { ref: 'Êxodo 15:26', texto: 'Porque eu sou o Senhor, que te sara.' },
+      { ref: 'Tiago 5:15', texto: 'E a oração da fé salvará o doente, e o Senhor o levantará; e, se houver cometido pecados, ser-lhe-ão perdoados.' },
+      { ref: 'Jeremias 17:14', texto: 'Sara-me, Senhor, e sararei; salva-me, e serei salvo; porque tu és o meu louvor.' },
+      { ref: 'Provérbios 17:22', texto: 'O coração alegre é como o bom remédio, mas o espírito abatido seca até os ossos.' },
+      { ref: '3 João 1:2', texto: 'Amado, desejo que te vá bem em todas as coisas e que tenhas saúde, assim como bem vai a tua alma.' },
+      { ref: '1 Pedro 2:24', texto: 'Levando ele mesmo em seu corpo os nossos pecados sobre o madeiro, para que, mortos para os pecados, pudéssemos viver para a justiça; e pelas suas feridas fostes sarados.' },
+      { ref: 'Salmos 30:2', texto: 'Senhor, meu Deus, clamei a ti, e tu me saraste.' },
+      { ref: 'Mateus 4:23', texto: 'E percorria Jesus toda a Galileia, ensinando nas suas sinagogas, e pregando o evangelho do Reino, e curando todas as enfermidades e moléstias entre o povo.' },
+    ],
+    reflexao: `O Salmo 147:3 usa a imagem de um enfermeiro: Deus "liga" — enfaixa, cuida, refaz o curativo — as feridas dos quebrantados. É cura com processo, não apenas com estalar de dedos. Enquanto oramos pelo milagre, também recebemos a graça diária da recuperação lenta, dos bons médicos e do coração alegre que, diz Provérbios, "é como o bom remédio".`,
+    faq: [
+      { q: 'Qual versículo orar por alguém doente?', a: 'Jeremias 30:17 ("te restaurarei a saúde e sararei as tuas chagas") e Tiago 5:14-15 (a oração da fé pelos enfermos) são os mais orados. Muitos também declaram o Salmo 103:2-3 sobre a vida do enfermo.' },
+      { q: 'Deus ainda cura hoje?', a: 'Cristãos creem que sim — pela oração e também pelos meios naturais que ele criou: medicina, tratamento e tempo. Tiago 5 orienta a igreja a orar pelos enfermos, e a Bíblia honra o trabalho dos médicos (Colossenses 4:14).' },
+      { q: 'E quando a cura não vem?', a: 'A própria Bíblia registra casos assim: Paulo pediu três vezes a remoção do seu "espinho na carne" e ouviu "a minha graça te basta" (2 Coríntios 12:9). A fé confia no Deus que cura e também no Deus que sustenta quando a resposta é diferente da esperada.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-protecao',
+    tema: 'Proteção',
+    titulo: 'Versículos de Proteção',
+    emoji: '🛡',
+    descricao:
+      'Versículos de proteção divina: promessas do Salmo 91, textos para orar pela família, pelos filhos, por viagens e pelo livramento de todo mal.',
+    heroFrase: 'Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará.',
+    intro: [
+      `Torre forte, escudo, refúgio, fortaleza, sombra, esconderijo — a Bíblia esgota as metáforas de segurança para descrever o que Deus é para quem nele confia. Não é promessa de vida sem perigos, mas de presença dentro deles: "quando passares pelas águas, estarei contigo" (Isaías 43:2).`,
+      `Reunimos os versículos de proteção mais orados pelos cristãos: sobre os filhos que saem de casa, sobre viagens, sobre a noite de sono, sobre o trabalho em dias difíceis. E, claro, o rei deles: o Salmo 91 — que você pode ler completo e explicado em nossa página dedicada.`,
+    ],
+    versiculos: [
+      { ref: 'Salmos 91:1-2', texto: 'Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará. Direi do Senhor: Ele é o meu Deus, o meu refúgio, a minha fortaleza, e nele confiarei.' },
+      { ref: 'Salmos 121:7-8', texto: 'O Senhor te guardará de todo mal; ele guardará a tua alma. O Senhor guardará a tua entrada e a tua saída, desde agora e para sempre.' },
+      { ref: 'Provérbios 18:10', texto: 'Torre forte é o nome do Senhor; para ela corre o justo e está seguro.' },
+      { ref: 'Salmos 91:11', texto: 'Porque aos seus anjos dará ordem a teu respeito, para te guardarem em todos os teus caminhos.' },
+      { ref: '2 Tessalonicenses 3:3', texto: 'Mas fiel é o Senhor, que vos confirmará e guardará do maligno.' },
+      { ref: 'Salmos 34:7', texto: 'O anjo do Senhor acampa-se ao redor dos que o temem e os livra.' },
+      { ref: 'Isaías 54:17', texto: 'Toda ferramenta preparada contra ti não prosperará, e toda língua que se levantar contra ti em juízo, tu a condenarás.' },
+      { ref: 'Salmos 32:7', texto: 'Tu és o lugar em que me escondo; tu me preservas da angústia; tu me cinges de alegres cantos de livramento.' },
+      { ref: 'Deuteronômio 31:8', texto: 'O Senhor, pois, é aquele que vai adiante de ti; ele será contigo, não te deixará, nem te desamparará; não temas, nem te espantes.' },
+      { ref: 'Salmos 18:2', texto: 'O Senhor é o meu rochedo, e o meu lugar forte, e o meu libertador; o meu Deus, a minha fortaleza, em quem confio; o meu escudo, a força da minha salvação e o meu alto refúgio.' },
+      { ref: 'Naum 1:7', texto: 'O Senhor é bom, ele serve de fortaleza no dia da angústia e conhece os que confiam nele.' },
+      { ref: 'Salmos 27:1', texto: 'O Senhor é a minha luz e a minha salvação; a quem temerei? O Senhor é a força da minha vida; de quem me recearei?' },
+    ],
+    reflexao: `O Salmo 121 acompanha o viajante do primeiro ao último passo: "a tua entrada e a tua saída, desde agora e para sempre". Era o cântico dos peregrinos subindo a Jerusalém por estradas perigosas. A proteção bíblica não é um amuleto — é um relacionamento: quem "habita" no esconderijo do Altíssimo é quem fez dele a sua morada diária.`,
+    faq: [
+      { q: 'Qual o salmo de proteção mais poderoso?', a: 'O Salmo 91 é o mais conhecido texto de proteção da Bíblia — leia-o completo e explicado em nossa página do Salmo 91. O Salmo 121 é o preferido para viagens, e Salmos 34:7 para a proteção diária.' },
+      { q: 'Qual versículo orar pelos filhos?', a: 'Salmos 91:11 ("aos seus anjos dará ordem a teu respeito") e Isaías 54:13 ("todos os teus filhos serão ensinados do Senhor") são os mais orados por pais e mães.' },
+      { q: 'Versículo de proteção serve como amuleto?', a: 'A Bíblia não trata seus textos como talismãs, e sim como convite à confiança: a promessa do Salmo 91 é para "aquele que habita" no Altíssimo — uma vida de comunhão, não apenas uma frase pendurada.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-sobre-perdao',
+    tema: 'Perdão',
+    titulo: 'Versículos sobre Perdão',
+    emoji: '🤍',
+    descricao:
+      'Versículos sobre perdão: o perdão de Deus para nossos pecados e o desafio de perdoar quem nos feriu — até setenta vezes sete.',
+    heroFrase: 'Quantas vezes pecará meu irmão contra mim, e eu lhe perdoarei? Até setenta vezes sete.',
+    intro: [
+      `Nenhum ensino de Jesus é tão admirado — e tão difícil — quanto o perdão. Quando Pedro sugeriu perdoar sete vezes, achando que era generoso, Jesus multiplicou: "setenta vezes sete". O perdão cristão não nasce do esforço, mas da memória: fomos perdoados primeiro, de uma dívida impagável.`,
+      `Nesta página estão os dois lados da moeda: os versículos sobre o perdão que recebemos de Deus — completo, definitivo, "quanto o Oriente está longe do Ocidente" — e os que nos chamam a estender esse mesmo perdão a quem nos feriu.`,
+    ],
+    versiculos: [
+      { ref: 'Efésios 4:32', texto: 'Antes, sede uns para com os outros benignos, misericordiosos, perdoando-vos uns aos outros, como também Deus vos perdoou em Cristo.' },
+      { ref: 'Mateus 6:14', texto: 'Porque, se perdoardes aos homens as suas ofensas, também vosso Pai celestial vos perdoará a vós.' },
+      { ref: 'Colossenses 3:13', texto: 'Suportando-vos uns aos outros e perdoando-vos uns aos outros, se algum tiver queixa contra outro; assim como Cristo vos perdoou, assim fazei vós também.' },
+      { ref: '1 João 1:9', texto: 'Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar os pecados e nos purificar de toda injustiça.' },
+      { ref: 'Salmos 103:12', texto: 'Quanto está longe o Oriente do Ocidente, assim afasta de nós as nossas transgressões.' },
+      { ref: 'Mateus 18:21-22', texto: 'Senhor, até quantas vezes pecará meu irmão contra mim, e eu lhe perdoarei? Até sete? Jesus lhe disse: Não te digo que até sete, mas até setenta vezes sete.' },
+      { ref: 'Isaías 1:18', texto: 'Ainda que os vossos pecados sejam como a escarlata, eles se tornarão brancos como a neve; ainda que sejam vermelhos como o carmesim, se tornarão como a branca lã.' },
+      { ref: 'Lucas 6:37', texto: 'Não julgueis, e não sereis julgados; não condeneis, e não sereis condenados; soltai, e soltar-vos-ão.' },
+      { ref: 'Miqueias 7:19', texto: 'Tornará a apiedar-se de nós, subjugará as nossas iniquidades e lançará todos os nossos pecados nas profundezas do mar.' },
+      { ref: 'Provérbios 28:13', texto: 'O que encobre as suas transgressões nunca prosperará; mas o que as confessa e deixa alcançará misericórdia.' },
+      { ref: 'Salmos 32:1', texto: 'Bem-aventurado aquele cuja transgressão é perdoada, e cujo pecado é coberto.' },
+      { ref: 'Marcos 11:25', texto: 'E, quando estiverdes orando, perdoai, se tendes alguma coisa contra alguém, para que vosso Pai, que está nos céus, vos perdoe as vossas ofensas.' },
+    ],
+    reflexao: `“Setenta vezes sete” não é uma conta a ser controlada — é a abolição da conta. Jesus contou em seguida a parábola do servo que, perdoado de uma dívida de milhões, prendeu o colega por alguns trocados (Mateus 18). Perdoar não significa negar a dor nem dispensar a justiça; significa soltar a cobrança e entregar o caso ao Juiz que julga com perfeição.`,
+    faq: [
+      { q: 'Perdoar significa esquecer e voltar a confiar?', a: 'Não necessariamente. O perdão libera a dívida emocional e entrega a ofensa a Deus; a confiança se reconstrói com tempo e mudança comprovada. A Bíblia manda perdoar sempre, mas também ensina prudência (Provérbios 22:3).' },
+      { q: 'E se eu não consigo perdoar?', a: 'Comece pedindo a Deus o desejo de perdoar — é um processo, não um interruptor. Meditar no perdão que recebemos (Efésios 4:32) é o caminho que a própria Bíblia aponta: perdoamos "como também Deus vos perdoou em Cristo".' },
+      { q: 'Deus perdoa qualquer pecado?', a: '1 João 1:9 não põe limites: "se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar". Isaías 1:18 usa a imagem mais forte: do escarlate à neve. O único requisito é confissão sincera e arrependimento.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-aniversario',
+    tema: 'Aniversário',
+    titulo: 'Versículos de Aniversário',
+    emoji: '🎂',
+    descricao:
+      'Versículos para aniversário: mensagens bíblicas lindas para parabenizar amigos e familiares e agradecer a Deus por mais um ano de vida.',
+    heroFrase: 'Este é o dia que fez o Senhor; regozijemo-nos e alegremo-nos nele.',
+    intro: [
+      `Um aniversário é mais que uma data — é um marco de gratidão: mais um ano de cuidado, livramentos e histórias para contar. A Bíblia está cheia de textos perfeitos para celebrar a vida: bênçãos, promessas de futuro e orações de agradecimento que transformam um simples "parabéns" numa mensagem inesquecível.`,
+      `Escolha abaixo o versículo ideal para escrever no cartão, no bolo, no story ou na mensagem de bom dia do aniversariante. Cada um vem com a referência para dar ainda mais significado à homenagem.`,
+    ],
+    versiculos: [
+      { ref: 'Salmos 118:24', texto: 'Este é o dia que fez o Senhor; regozijemo-nos e alegremo-nos nele.' },
+      { ref: 'Números 6:24-26', texto: 'O Senhor te abençoe e te guarde; o Senhor faça resplandecer o seu rosto sobre ti e tenha misericórdia de ti; o Senhor sobre ti levante o seu rosto e te dê a paz.' },
+      { ref: 'Jeremias 29:11', texto: 'Porque eu bem sei os pensamentos que penso de vós, diz o Senhor: pensamentos de paz e não de mal, para vos dar o fim que esperais.' },
+      { ref: 'Salmos 37:4', texto: 'Deleita-te também no Senhor, e ele te concederá o que deseja o teu coração.' },
+      { ref: 'Salmos 20:4', texto: 'Conceda-te conforme o teu coração e cumpra todo o teu desígnio.' },
+      { ref: 'Filipenses 1:6', texto: 'Tendo por certo isto mesmo: que aquele que em vós começou a boa obra a aperfeiçoará até ao Dia de Jesus Cristo.' },
+      { ref: 'Salmos 139:14', texto: 'Eu te louvarei, porque de um modo terrível e tão maravilhoso fui formado; maravilhosas são as tuas obras, e a minha alma o sabe muito bem.' },
+      { ref: 'Provérbios 9:11', texto: 'Porque por mim se multiplicam os teus dias, e anos de vida se te aumentarão.' },
+      { ref: 'Salmos 90:12', texto: 'Ensina-nos a contar os nossos dias, de tal maneira que alcancemos coração sábio.' },
+      { ref: 'Salmos 23:6', texto: 'Certamente que a bondade e a misericórdia me seguirão todos os dias da minha vida; e habitarei na Casa do Senhor por longos dias.' },
+      { ref: '3 João 1:2', texto: 'Amado, desejo que te vá bem em todas as coisas e que tenhas saúde, assim como bem vai a tua alma.' },
+      { ref: 'Salmos 91:16', texto: 'Fartá-lo-ei com longura de dias e lhe mostrarei a minha salvação.' },
+    ],
+    reflexao: `O Salmo 90 — a oração de Moisés — pede algo curioso para quem celebra aniversário: "ensina-nos a contar os nossos dias". Não somar, contar: dar valor a cada um. Um novo ano de vida é o momento perfeito para olhar para trás com gratidão ("até aqui nos ajudou o Senhor") e para a frente com confiança ("aquele que começou a boa obra a aperfeiçoará").`,
+    faq: [
+      { q: 'Qual o melhor versículo para mensagem de aniversário?', a: 'Números 6:24-26 é a bênção mais completa e emocionante para dedicar a alguém. Para mensagens curtas, Salmos 118:24 e Salmos 37:4 são os mais usados em cartões e redes sociais.' },
+      { q: 'Qual versículo para aniversário de mãe ou pai?', a: 'Para mães, Provérbios 31:28-29 ("muitas filhas agiram virtuosamente, mas tu a todas és superior") é o clássico. Para pais, Salmos 103:13 e Provérbios 20:7 ("o justo anda na sua sinceridade; bem-aventurados serão os seus filhos depois dele").' },
+      { q: 'Qual versículo para o meu próprio aniversário?', a: 'Salmos 139:14 é perfeito para agradecer pela vida: "de um modo terrível e tão maravilhoso fui formado". Muitos também postam Filipenses 1:6, celebrando a obra que Deus continua fazendo.' },
+    ],
+  },
+
+  {
+    slug: 'versiculos-de-animo',
+    tema: 'Ânimo',
+    titulo: 'Versículos de Ânimo e Motivação',
+    emoji: '🔥',
+    descricao:
+      'Versículos de ânimo e motivação: palavras bíblicas para recomeçar, perseverar e não desistir — porque a seu tempo ceifaremos, se não desfalecermos.',
+    heroFrase: 'Não nos cansemos de fazer o bem, porque a seu tempo ceifaremos, se não houvermos desfalecido.',
+    intro: [
+      `Desanimar é humano. A Bíblia registra profetas exaustos, reis deprimidos e apóstolos perseguidos — e para cada um deles, uma palavra de levantar: "esforça-te e tem bom ânimo". Não é autoajuda de ocasião: é a voz do Deus que caminha junto e garante a colheita a quem não desiste da semeadura.`,
+      `Guarde estes versículos para as segundas-feiras difíceis, os recomeços, o projeto que parece não sair do lugar, a fase de espera. Eles já levantaram gerações — e seguem em pleno vigor.`,
+    ],
+    versiculos: [
+      { ref: 'Gálatas 6:9', texto: 'E não nos cansemos de fazer o bem, porque a seu tempo ceifaremos, se não houvermos desfalecido.' },
+      { ref: 'Josué 1:9', texto: 'Esforça-te e tem bom ânimo; não pasmes, nem te espantes, porque o Senhor, teu Deus, é contigo por onde quer que andares.' },
+      { ref: 'Isaías 40:31', texto: 'Mas os que esperam no Senhor renovarão as suas forças, subirão com asas como águias, correrão e não se cansarão, caminharão e não se fatigarão.' },
+      { ref: 'Salmos 31:24', texto: 'Esforçai-vos, e ele fortalecerá o vosso coração, vós todos que esperais no Senhor.' },
+      { ref: '2 Crônicas 15:7', texto: 'Mas esforçai-vos, e não desfaleçam as vossas mãos, porque a vossa obra tem uma recompensa.' },
+      { ref: 'Filipenses 3:13-14', texto: 'Uma coisa faço, e é que, esquecendo-me das coisas que atrás ficam e avançando para as que estão diante de mim, prossigo para o alvo, pelo prêmio da soberana vocação de Deus em Cristo Jesus.' },
+      { ref: 'Salmos 27:14', texto: 'Espera no Senhor, anima-te, e ele fortalecerá o teu coração; espera, pois, no Senhor.' },
+      { ref: '1 Coríntios 15:58', texto: 'Portanto, meus amados irmãos, sede firmes e constantes, sempre abundantes na obra do Senhor, sabendo que o vosso trabalho não é vão no Senhor.' },
+      { ref: 'Romanos 8:28', texto: 'E sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus, daqueles que são chamados por seu decreto.' },
+      { ref: 'Isaías 43:18-19', texto: 'Não vos lembreis das coisas passadas, nem considereis as antigas. Eis que faço uma coisa nova, agora sairá à luz; porventura, não a percebeis?' },
+      { ref: 'Salmos 37:5', texto: 'Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará.' },
+      { ref: 'Hebreus 12:1', texto: 'Corramos, com paciência, a carreira que nos está proposta, olhando para Jesus, autor e consumador da fé.' },
+    ],
+    reflexao: `Gálatas 6:9 esconde uma lei da vida espiritual: entre a semeadura e a colheita existe uma estação invisível, em que nada parece acontecer. "A seu tempo ceifaremos" — o tempo é dele, a perseverança é nossa. Desistir na estação invisível é abandonar uma colheita que já estava a caminho.`,
+    faq: [
+      { q: 'Qual versículo para quem quer desistir?', a: 'Gálatas 6:9 é a palavra exata: "não nos cansemos de fazer o bem, porque a seu tempo ceifaremos, se não houvermos desfalecido". Isaías 40:31 completa com a promessa de forças renovadas.' },
+      { q: 'Qual versículo para começar a semana motivado?', a: 'Lamentações 3:22-23 lembra que as misericórdias de Deus "se renovam a cada manhã", e Salmos 118:24 celebra: "este é o dia que fez o Senhor". Filipenses 3:13-14 é ideal para recomeços.' },
+      { q: 'O que a Bíblia diz sobre recomeçar?', a: 'Isaías 43:18-19 é o texto do recomeço: "não vos lembreis das coisas passadas... eis que faço uma coisa nova". A história bíblica é cheia de segundas chances: Pedro, Jonas, Marcos e o filho pródigo recomeçaram — e frutificaram.' },
+    ],
+  },
+];
+
+// Pool para o Versículo do Dia e o Gerador — todos os versículos de todos
+// os temas, com o tema de origem anexado.
+export const TODOS_VERSICULOS = TEMAS.flatMap((t) =>
+  t.versiculos.map((v) => ({ ...v, tema: t.tema, slugTema: t.slug }))
+);

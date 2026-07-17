@@ -1,0 +1,13 @@
+{
+  "name": "bibliasagradas",
+  "version": "1.0.0",
+  "description": "Gerador estático do site bibliasagradas.com.br — versículos, salmos, guias e ferramentas de leitura bíblica.",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "author": "BibliaSagradas.com.br",
+  "license": "UNLICENSED",
+  "private": true
+}
